@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="abc" placeholder="enter value">
+
+    <button onclick="ent()">enter</button>
+    <script>
+   function ent(){
+    var apple=document.getElementById('abc').value
+
+    console.log(apple);
+   }
+    
+        let array=[1,2,3,4,5,6,7]
+        array.push(99)
+        console.log(array); 
+
+        array.pop()
+        console.log(array);
+
+        array.unshift(99)
+        console.log(array);
+
+        array.shift()
+        console.log(array);
+
+        array.splice(2,0,11)
+        console.log(array);
+        
+        
+        array.splice(5,2,0,0)
+        console.log(array);
+
+console.log("-------------------------map-------------------");
+  
+let array1=[1,2,3,4,5,6,7]
+   
+ var a=array.map((val,ind)=>{
+    if(ind==2){
+
+return val+10
+}
+else{
+   return val
+}
+ })
+console.log(a);
+
+console.log("-------------------------filter-------------------");
+
+
+var age=[19,45,23,22,10,8,7,77,18,88]
+console.log(age);
+
+var filter=age.filter((val)=>{
+
+    return val>=18
+
+})
+
+console.log(filter);
+
+console.log("-------------------------reduce-------------------");
+
+var reduce=[1,2,3,4,5]
+
+var abc=reduce.reduce((pre,curr)=>{
+        return pre+curr
+})
+
+console.log(abc);
+
+console.log("-------------------------every-------------------");
+
+
+var every=[8,2,3,4,5,6]
+
+var e=every.every((val)=>{
+ return val>=2
+})
+
+console.log(e);
+
+console.log("-------------------------some-------------------");
+
+
+var some=[8,2,3,4,5,6,22]
+
+var ee=some.some((val)=>{
+ return val>21
+})
+
+console.log(ee);
+
+
+console.log("-------------------------flat-------------------");
+
+var fl=[2,4,6,7,8,[1,2,3,4,5,6,7],[6,6,6,6,6]]
+
+console.log(fl.flat());
+
+
+console.log('---------------includes-------------');
+
+var inc=[1,2,3,4,5,6]
+
+console.log(inc.includes(2));
+    </script>
+</body>
+</html>

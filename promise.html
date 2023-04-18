@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+    function breakfast(){
+    return new Promise(c=>{
+    setTimeout(()=>{
+    c('breakfast completed');
+   },3000)
+})
+}
+
+function getdressed(){
+console.log('get dressed completed');
+}
+
+function shower(){
+    return new Promise(b=>{
+        setTimeout(()=>{
+            b('shower is completed');
+   },5000)
+    })
+}
+
+
+function travel(){
+    console.log('travel is completed');
+}
+
+
+const routine=async()=>{
+    
+
+        var step1=await shower()
+        console.log(step1);
+
+        var step2=await getdressed()
+
+        var step3=await breakfast() 
+        console.log(step3);
+
+        var step4=await travel()
+}
+
+routine()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+//         const loop=['apple','mango','papaya']
+//         for(let fruit of loop)
+//         {
+//             console.log(fruit);
+//         }
+// console.log('----------------------');
+
+//         let loops={
+//             name:'ayaz',
+//             age:29
+//         }
+//         for(let key in loops){
+//             const value=loops[key];
+//             console.log(key);
+//             console.log(value);
+            
+//         }
+
+//                             let forloop=11
+//                             let count =0
+//                             for(let i=2;i<=forloop;i++){
+//                                 if(forloop%i==0)
+//                                 {
+//                                     count++
+//                                 }
+//                             }
+//                             if(count==1)
+//                             {
+//                                 console.log('prime');
+//                             }
+//                             else{
+//                                 console.log('not prime');
+//                             }
+
+
+//     let a=10;
+//     for(let i=1;i<=a;i++)
+//     {
+//         console.log(i);
+//     }
+
+
+// function breakfast(){
+//     return new Promise(c=>{
+//     setTimeout(()=>{
+//     c('breakfast completed');
+//    },3000)
+// })
+// }
+
+// function shower(){
+//     return new Promise(b=>{
+//         setTimeout(()=>{
+//             b('shower is completed');
+//    },7000)
+//     })
+// }
+
+// function getdressed(){
+// console.log('get dressed completed');
+// }
+
+// function travel(){
+//     console.log('travel is completed');
+// }
+
+
+// const routine=async()=>{
+    
+
+//         var step1=await shower()
+//         console.log(step1);
+
+//         var step2=await getdressed()
+       
+//         var step3=await breakfast() 
+//         console.log(step3);
+
+//         var step4=await travel()
+// }
+
+// routine()
+
+// function sum(a,...args){
+//     let sum=0;
+//     for(let arg of args)
+//         sum+=arg;
+//         return sum;
+    
+// }
+
+// let x=sum(1,2,3,4,5)
+
+// console.log(x);
+
+
+
+// function sum(...args){
+//     let sum=0;
+//     for(let i=0;i<=args.length;i++)
+//     {
+//         sum+=i;
+       
+//     }
+//     return sum;   
+    
+// }
+
+// let x=sum(1,2,3,4,5)
+
+// console.log(x);
+
+
+// function myFun(a, b, ...Args) {
+//   console.log("a", a);
+//   console.log("b", b);
+//   console.log("rest",Args);
+// }
+
+// myFun("one", "two", "three", "four", "five", "six");
+
+// Console Output:
+// a, one
+// b, two
+// manyMoreArgs, ["three", "four", "five", "six"]
+
+
+
+function example(){
+    return new Promise(b=>{
+        setTimeout(()=>{
+            b('shower is completed');
+   },7000)
+    })
+}
+async function app()
+{
+    console.log('hello');
+    let result=await example();
+    console.log('result');
+    console.log('welcome');
+}
+app()
+
+    </script>
+</body>
+</html>

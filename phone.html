@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <input type="phone" id="phoneval" placeholder="phone number">
+        <button onclick="validation()">submit</button>
+
+    <script>
+        function validation(){
+            var phonedetail=document.getElementById('phoneval').value
+            console.log(phonedetail);
+
+            var prime=0;
+            var primeval=[]
+
+            var nonprime=0;
+            var nonprimeval=[]
+
+            for(var i=0;i<phonedetail.length;i++){
+                if(phonedetail[i]%2==1){
+                    prime++;
+                 primeval.push(phonedetail[i])                    
+                }
+                else{
+                    nonprime++
+                    nonprimeval.push(phonedetail[i])
+                }
+            }
+            console.log(prime);
+            console.log(primeval);
+            console.log(nonprime);
+            console.log(nonprimeval);
+
+            
+
+            var res=[]
+            const mergeAlernatively = (primeval, nonprimeval) => {
+
+          
+            for(let i = 0; i < primeval.length + nonprimeval.length; i++){
+                if(i % 2 === 0){
+                    res.push(primeval[i/2]);
+                     }
+        else{
+            res.push(nonprimeval[(i-1)/2]);
+      }}
+      return res
+    }
+        
+    
+        console.log(mergeAlernatively(primeval, nonprimeval));
+
+
+        var highest=primeval.concat(nonprimeval)
+
+        // console.log(highest);
+
+        var a=highest.sort()
+
+        console.log(a.reverse());
+
+   };
+       
+    </script>
+</body>
+</html>

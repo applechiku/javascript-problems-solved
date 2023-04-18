@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matrix Table</title>
+  </head>
+  <body>
+    <table>
+      <caption>3x3 Matrix Table</caption>
+      <tbody>
+        <tr>
+          <td><input type="text" id="row1col1" ></td>
+          <td><input type="text" id="row1col2"></td>
+          <td><input type="text" id="row1col3"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="row2col1"></td>
+          <td><input type="text" id="row2col2"></td>
+          <td><input type="text" id="row2col3"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="row3col1"></td>
+          <td><input type="text" id="row3col2"></td>
+          <td><input type="text" id="row3col3"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="matrix()">Submit</button>
+
+    <script>
+
+        function matrix(){
+
+        
+        var row1col1=document.getElementById('row1col1').value
+        var row1col2=document.getElementById('row1col2').value
+        var row1col3=document.getElementById('row1col3').value
+
+        var row2col1=document.getElementById('row2col1').value
+        var row2col2=document.getElementById('row2col2').value
+        var row2col3=document.getElementById('row2col3').value
+
+        var row3col1=document.getElementById('row3col1').value
+        var row3col2=document.getElementById('row3col2').value
+        var row3col3=document.getElementById('row3col3').value
+
+
+        // console.log(row1col1,row1col2,row1col3);
+        // console.log(row2col1,row2col2,row2col3);
+        // console.log(row3col1,row3col2,row3col3);
+
+        var allInputValues=[]
+        var primeNumber=[]
+        var notPrime=[]
+       
+
+        allInputValues.push(row1col1 ,row1col2,row1col3,row2col1,row2col2,row2col3,row3col1,row3col2,row3col3)
+        
+        for(var i=0;i<allInputValues.length;i++){
+            if(allInputValues[i]%2==0 || allInputValues[i]%3==0){
+
+                notPrime.push(allInputValues[i])
+
+            }
+            else{
+                primeNumber.push(allInputValues[i])
+            }
+        }
+        console.log(primeNumber);
+            console.log(notPrime);
+
+            console.log('PRIME LENGTH'+primeNumber.length);
+            console.log('NON PRIME LENGTH'+notPrime.length);
+
+            if(primeNumber.length==notPrime.length){
+
+                for(var i=0;i<primeNumber.length;i++){
+                    console.log(primeNumber[i],notPrime[i]);
+                }
+            }
+
+            if(primeNumber.length>notPrime.length){
+                
+                console.log(notPrime,primeNumber);
+            }
+             if(primeNumber.length<notPrime.length){
+                console.log(primeNumber,notPrime);
+                
+                
+            }
+
+
+    }
+        
+    </script>
+  </body>
+</html>

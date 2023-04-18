@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="inp" type="text"/>
+    <div id="display"></div>
+    <button onclick="validate()">Submit</button>
+    <script>
+
+        function validate()
+        {
+            var inp = document.getElementById('inp').value
+
+            var disp = document.getElementById('display')
+            disp.innerHTML = inp
+
+
+            var arr = new Array()
+             arr = inp
+             console.log("The input length is",arr.length);
+
+
+
+             // to print char and numbers
+
+             
+                var num = 0;
+                var char = 0;
+                var inp2 = inp.split("")
+                
+                var myChar = new Array()
+                var myNum = new Array()
+
+
+            for(var i=0;i<inp2.length;i++)
+            {
+                if(isNaN(inp2[i]) == true)
+                {
+                    char++
+                    myChar.push(inp2[i])
+                }
+               else
+                {
+                    num++;
+                    myNum.push(inp2[i])
+                }
+            }
+            console.log("char type ",char,"number type",num);
+
+
+
+             //if both char and num are same print char num alternately
+            
+             var arr3  = []
+            if(char.length == num.length)
+            {
+                for(var i=0;i<myChar.length;i++)
+                {
+                   arr3.push(myChar[i])
+                   arr3.push(myNum[i]) 
+                }
+            }
+            console.log(arr3);
+
+
+             //if both char and num are not same print higgest length first followed by lowest one.
+            //
+
+            if(char.length != num.length)
+            {
+                if(char.length>num.length)
+                {
+                    console.log(myChar+myNum);
+                }
+                else{
+                 
+                    console.log(myNum+myChar);
+                
+                }
+            }
+
+
+           
+        }
+    </script>
+</body>
+</html>

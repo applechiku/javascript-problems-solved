@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+        #b{
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+        }
+        #c{
+            background-color:green;
+            height: 100px;
+            width: 100px;
+        }
+        #aaa{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body> 
+    <div id="aaa">
+    <div id="a" onclick="div1()"></div>
+    <div id="b" onclick="div2()"></div>
+    <div id="c" onclick="div3()"></div>
+</div>
+<script>
+function div1()
+{
+document.getElementById('b').style.backgroundColor='black'
+}
+function div2()
+{
+document.getElementById('a').style.visibility='hidden'
+}
+function div3()
+{
+document.getElementById('b').innerText="hello"
+}
+
+</script>
+</body>
+</html>

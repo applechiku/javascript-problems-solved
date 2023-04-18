@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    First Name<input type="text" name="fname" id="fname">
+        Last Name<input type="text" name="lname" id="lname">
+        <button onclick="submit()">Submit</button>
+
+
+        <script>
+             function submit(){
+            var fname = document.getElementById('fname').value;
+            var lname = document.getElementById('lname').value;
+            
+            var fvowel = 0;
+            var fconst=0;
+    
+            
+            var lvowel = 0;
+            var lconst=0;
+
+          
+
+            for (var i=0;i<fname.length; i++){
+                if(fname[i] == 'a' || fname[i]=='e' || fname[i]=='i'|| fname[i]=='o'|| fname[i]=='u' || fname[i]=='A'|| fname[i]=='E'|| fname[i]=='I'|| fname[i]=='O'|| fname[i]=='U'){
+                    fvowel++
+                }
+                else{
+                    fconst++
+                }
+            }
+
+            for (var i=0;i<lname.length; i++){
+                if(lname[i] == 'a' || lname[i]=='e' || lname[i]=='i'|| lname[i]=='o'|| lname[i]=='u' || lname[i]=='A'|| lname[i]=='E'|| lname[i]=='I'|| lname[i]=='O'|| lname[i]=='U'){
+                    lvowel++
+                }
+                else{
+                    lconst++
+                }
+            }
+
+            console.log("vowels in first name"+fvowel)
+            console.log("consonent in first name"+fconst)
+
+            console.log("vowels in last name"+lvowel);
+            console.log("consonent in first name"+lconst);
+
+           var totalvowel=fvowel+lvowel
+            var totalconst=fconst+lconst
+
+            console.log("total vowels in firstname and lastname is"+totalvowel);
+            console.log("total consonents in firstname and lastname is"+totalconst);
+
+            
+        }
+        </script>
+</body>
+</html>

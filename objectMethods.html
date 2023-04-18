@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+console.log('-------------------object.freeze-----------------');
+
+        let data={
+            username:'ayaz',
+            id:1,
+            pass:'apple'
+        }
+
+        Object.freeze(data)
+
+        data.id=22
+
+        console.log(data.id);
+
+
+        console.log('-----------------object.keys----------------');
+
+
+let a={
+    name:'ayaz',
+    unameid:24,
+    pass:'happiness'
+}
+
+console.log(Object.keys(a));
+
+
+console.log('----------object.values--------------');
+
+let aa={
+    name:'ayaz',
+    unameid:24,
+    pass:'happiness'
+}
+
+console.log(Object.values(aa));
+
+
+console.log('------------object.entries------------');
+
+let aaa={
+    name:'ayaz',
+    unameid:24,
+    pass:'happiness'
+}
+ let alldata=Object.entries(aaa)
+
+ console.log(alldata);
+
+console.log('-------------object.assign------------');
+
+
+let aaaa={
+    name:'ayaz',
+    unameid:24,
+    pass:'happiness'
+}
+
+let b={
+    mob:12345
+}
+
+let c=Object.assign(aaaa,b)
+
+console.log(c);
+
+// b.mob=1234;
+// console.log(c);
+
+console.log('--------object.create------------');
+
+const person = {
+  isHuman: false,
+  printIntroduction: function() {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  }
+};
+
+const me = Object.create(person);
+
+me.name = 'Mango'; 
+me.isHuman = true; 
+
+me.printIntroduction();
+
+
+
+
+
+    </script>
+</body>
+</html>

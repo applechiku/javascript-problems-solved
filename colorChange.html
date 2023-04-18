@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+   <div style="display:flex; justify-content: space-around;">
+    <div id="box1" style=" width: 250px; height: 250px; background-color: red;" onclick="box1()"></div>
+    <div id="box2" style=" width: 250px; height: 250px; background-color: yellow;" onclick="box2()"></div>
+    <div id="box3" style=" width: 250px; height: 250px; background-color: green;" onclick="box3()"></div>
+   </div>
+
+    <script>
+        function box1(){
+            document.getElementById('box1').style.backgroundColor='yellow'
+            document.getElementById('box2').style.backgroundColor='red'
+        }
+
+        function box2(){
+            document.getElementById('box2').style.backgroundColor='green'
+           
+            document.getElementById('box3').style.backgroundColor='red'
+        }
+
+        function box3(){
+            document.getElementById('box1').style.backgroundColor='green'
+            document.getElementById('box3').style.backgroundColor='yellow'
+
+           
+        }
+    </script>
+
+   
+</body>
+</html>
+
